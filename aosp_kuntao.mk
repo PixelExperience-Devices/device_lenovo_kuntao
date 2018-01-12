@@ -17,8 +17,13 @@
 # Inherit device configuration
 $(call inherit-product, device/lenovo/kuntao/full_kuntao.mk)
 
-# Inherit some common aosp stuff.
-$(call inherit-product, vendor/aosp/common.mk)
+# Inherit some common AOSP stuff.
+TARGET_ARCH := arm64
+TARGET_DENSITY := xxhdpi
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_INCLUDE_ARCORE := true
+CUSTOM_BUILD_TYPE=OFFICIAL
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Boot animation res
 TARGET_BOOT_ANIMATION_RES := 1080

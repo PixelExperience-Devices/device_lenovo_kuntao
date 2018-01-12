@@ -182,6 +182,9 @@ TARGET_TAP_TO_WAKE_NODE := "/sys/board_properties/tpd_suspend_status"
 # Enable real time lockscreen charging current values
 BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
 
+# Enable real time lockscreen charging current values
+BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
+
 # Properties
 TARGET_SYSTEM_PROP += device/lenovo/kuntao/system.prop
 
@@ -195,9 +198,6 @@ TARGET_RECOVERY_FSTAB := device/lenovo/kuntao/rootdir/etc/fstab.qcom
 # Render
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 USE_OPENGL_RENDERER := true
-
-# RIL
-TARGET_RIL_VARIANT := caf
 
 # SELinux
 BOARD_SEPOLICY_DIRS += device/lenovo/kuntao/sepolicy
