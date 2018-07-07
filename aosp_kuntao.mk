@@ -25,6 +25,9 @@ TARGET_INCLUDE_ARCORE := true
 CUSTOM_BUILD_TYPE=OFFICIAL
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
+# GApps
+TARGET_GAPPS_ARCH := arm64
+
 # Boot animation res
 TARGET_BOOT_ANIMATION_RES := 1080
 
